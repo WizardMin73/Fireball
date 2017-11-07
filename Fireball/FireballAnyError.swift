@@ -1,5 +1,5 @@
 //
-//  AnyError.swift
+//  FireballAnyError.swift
 //  Fireball
 //
 //  Created by M1N on 2017/10/31.
@@ -10,12 +10,12 @@ import Foundation
 
 /// A type-erased error which wraps an arbitrary error instace. This should be
 /// useful for generic contexts.
-public struct AnyError: Swift.Error {
-    /// The underlying error.
+public struct FireballAnyError: Swift.Error {
+    
     public let error: Swift.Error
     
     public init(_ error: Swift.Error) {
-        if let anyError = error as? AnyError {
+        if let anyError = error as? FireballAnyError {
             self = anyError
         } else {
             self.error = error
@@ -23,13 +23,13 @@ public struct AnyError: Swift.Error {
     }
 }
 
-extension AnyError: CustomStringConvertible {
+extension FireballAnyError: CustomStringConvertible {
     public var description: String {
         return String(describing: error)
     }
 }
 
-extension AnyError: LocalizedError {
+extension FireballAnyError: LocalizedError {
     public var errorDescription: String? {
         return error.localizedDescription
     }

@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.0.2 (swiftlang-900.0.69.2 clang-900.0.38)"
+options: "43dc195d25eddf8adc0410dbda210d42"
+build_time: [1509960974, 996272000]
+inputs:
+  "/Users/min/Code/Swift/Fireball/Fireball/AnyError.swift": [1509960947, 0]
+  "/Users/min/Code/Swift/Fireball/Fireball/FireballProtocol.swift": [1509593765, 0]
+  "/Users/min/Code/Swift/Fireball/Fireball/Fireball.swift": [1509960947, 0]
+  "/Users/min/Code/Swift/Fireball/Fireball/NoError.swift": [1509960960, 0]

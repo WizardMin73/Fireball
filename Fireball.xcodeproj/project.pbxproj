@@ -6,14 +6,28 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3939FC5F1FAB40F80022A33F /* UniversalFireball */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3939FC621FAB40F80022A33F /* Build configuration list for PBXAggregateTarget "UniversalFireball" */;
+			buildPhases = (
+				3939FC631FAB410B0022A33F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalFireball;
+			productName = UniversalFireball;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		394EF1B61FA89D0E00E43194 /* Fireball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394EF1AC1FA89D0E00E43194 /* Fireball.framework */; };
 		394EF1BB1FA89D0E00E43194 /* FireballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394EF1BA1FA89D0E00E43194 /* FireballTests.swift */; };
 		394EF1BD1FA89D0E00E43194 /* Fireball.h in Headers */ = {isa = PBXBuildFile; fileRef = 394EF1AF1FA89D0E00E43194 /* Fireball.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		394EF1C71FA89D1F00E43194 /* Fireball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394EF1C61FA89D1F00E43194 /* Fireball.swift */; };
 		394EF1C91FA8AFE900E43194 /* FireballProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394EF1C81FA8AFE900E43194 /* FireballProtocol.swift */; };
-		394EF1CB1FA8B5F100E43194 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394EF1CA1FA8B5F100E43194 /* AnyError.swift */; };
-		394EF1CD1FA8B74C00E43194 /* NoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394EF1CC1FA8B74C00E43194 /* NoError.swift */; };
+		394EF1CB1FA8B5F100E43194 /* FireballAnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394EF1CA1FA8B5F100E43194 /* FireballAnyError.swift */; };
+		394EF1CD1FA8B74C00E43194 /* FireballNoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394EF1CC1FA8B74C00E43194 /* FireballNoError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +49,8 @@
 		394EF1BC1FA89D0E00E43194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394EF1C61FA89D1F00E43194 /* Fireball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fireball.swift; sourceTree = "<group>"; };
 		394EF1C81FA8AFE900E43194 /* FireballProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireballProtocol.swift; sourceTree = "<group>"; };
-		394EF1CA1FA8B5F100E43194 /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
-		394EF1CC1FA8B74C00E43194 /* NoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoError.swift; sourceTree = "<group>"; };
+		394EF1CA1FA8B5F100E43194 /* FireballAnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireballAnyError.swift; sourceTree = "<group>"; };
+		394EF1CC1FA8B74C00E43194 /* FireballNoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireballNoError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +96,8 @@
 				394EF1AF1FA89D0E00E43194 /* Fireball.h */,
 				394EF1B01FA89D0E00E43194 /* Info.plist */,
 				394EF1C61FA89D1F00E43194 /* Fireball.swift */,
-				394EF1CA1FA8B5F100E43194 /* AnyError.swift */,
-				394EF1CC1FA8B74C00E43194 /* NoError.swift */,
+				394EF1CA1FA8B5F100E43194 /* FireballAnyError.swift */,
+				394EF1CC1FA8B74C00E43194 /* FireballNoError.swift */,
 				394EF1C81FA8AFE900E43194 /* FireballProtocol.swift */,
 			);
 			path = Fireball;
@@ -158,6 +172,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = M1N;
 				TargetAttributes = {
+					3939FC5F1FAB40F80022A33F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					394EF1AB1FA89D0E00E43194 = {
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0900;
@@ -183,6 +201,7 @@
 			targets = (
 				394EF1AB1FA89D0E00E43194 /* Fireball */,
 				394EF1B41FA89D0E00E43194 /* FireballTests */,
+				3939FC5F1FAB40F80022A33F /* UniversalFireball */,
 			);
 		};
 /* End PBXProject section */
@@ -204,15 +223,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3939FC631FAB410B0022A33F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n\nxcodebuild -target \"Fireball\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\nxcodebuild -target \"Fireball\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\n\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/Fireball.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/Fireball.framework/Modules/Fireball.swiftmodule/.\"\n\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\n\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/Fireball.framework/Modules/Fireball.swiftmodule\"\n\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\n\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/Fireball.framework/Fireball\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/Fireball.framework/Fireball\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/Fireball.framework/Fireball\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\n\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/Fireball.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\n\nopen \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		394EF1A71FA89D0E00E43194 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				394EF1CB1FA8B5F100E43194 /* AnyError.swift in Sources */,
+				394EF1CB1FA8B5F100E43194 /* FireballAnyError.swift in Sources */,
 				394EF1C91FA8AFE900E43194 /* FireballProtocol.swift in Sources */,
 				394EF1C71FA89D1F00E43194 /* Fireball.swift in Sources */,
-				394EF1CD1FA8B74C00E43194 /* NoError.swift in Sources */,
+				394EF1CD1FA8B74C00E43194 /* FireballNoError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +270,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3939FC601FAB40F80022A33F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3939FC611FAB40F80022A33F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		394EF1BE1FA89D0E00E43194 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -360,13 +411,16 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Fireball/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = M1N.Fireball;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 i386 armv7s x86_64";
 			};
 			name = Debug;
 		};
@@ -382,12 +436,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Fireball/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = M1N.Fireball;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 i386 armv7s x86_64";
 			};
 			name = Release;
 		};
@@ -422,6 +478,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3939FC621FAB40F80022A33F /* Build configuration list for PBXAggregateTarget "UniversalFireball" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3939FC601FAB40F80022A33F /* Debug */,
+				3939FC611FAB40F80022A33F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		394EF1A61FA89D0E00E43194 /* Build configuration list for PBXProject "Fireball" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

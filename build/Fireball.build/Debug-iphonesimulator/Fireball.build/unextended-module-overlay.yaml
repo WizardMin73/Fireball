@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/min/Library/Developer/Xcode/DerivedData/Fireball-epzhrytszwjcfxabblbugoeaibcn/Build/Products/Debug-iphonesimulator/Fireball.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/min/Code/Swift/Fireball/build/Fireball.build/Debug-iphonesimulator/Fireball.build/unextended-module.modulemap',
+    }]
+  }]
+}

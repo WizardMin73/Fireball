@@ -1,0 +1,11 @@
+framework module Fireball {
+  umbrella header "Fireball.h"
+
+  export *
+  module * { export * }
+}
+
+module Fireball.Swift {
+    header "Fireball-Swift.h"
+    requires objc
+}

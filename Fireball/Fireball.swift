@@ -37,8 +37,8 @@ public enum Fireball<Value, Error: Swift.Error>: FireballProtocol, CustomStringC
         do {
             self = .success(try f())
         } catch var error {
-            if Error.self == AnyError.self {
-                error = AnyError(error)
+            if Error.self == FireballAnyError.self {
+                error = FireballAnyError(error)
             }
             self = .failure(error as! Error)
         }
@@ -120,18 +120,18 @@ public enum Fireball<Value, Error: Swift.Error>: FireballProtocol, CustomStringC
     }
 }
 
-extension Fireball where Error == AnyError {
-    /// Constructs a fireball from an expression that uses throw, failing with AnyError if throws.
+extension Fireball where Error == FireballAnyError {
+    /// Constructs a fireball from an expression that uses throw, failing with FireballAnyError if throws.
     public init(_ f: @autoclosure () throws -> Value) {
         self.init(attempt: f)
     }
     
-    /// Constructs a fireball from a closure that uses `throw`, failing with `AnyError` if throws.
+    /// Constructs a fireball from a closure that uses `throw`, failing with `FireballAnyError` if throws.
     public init(attempt f: () throws -> Value) {
         do {
             self = .success(try f())
         } catch {
-            self = .failure(AnyError(error))
+            self = .failure(FireballAnyError(error))
         }
     }
 }
